@@ -21,8 +21,8 @@ const Disciplines = () => {
             className="text-xl text-gray-700 leading-relaxed mb-16 text-center max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
           >
             En Xhala entendemos el bienestar como un todo: cuerpo, mente y energía en equilibrio. Por eso ofrecemos diferentes disciplinas que, aunque únicas en su esencia, se complementan de manera natural y profunda.
           </motion.p>
@@ -30,11 +30,11 @@ const Disciplines = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
 className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 group p-8"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              whileHover={{ y: -8, scale: 1.02 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ y: -4 }}
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-20 h-20 bg-[#96e3d8] rounded-2xl flex items-center justify-center shadow-lg mb-6">
@@ -49,11 +49,11 @@ className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl t
 
             <motion.div
 className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 group p-8"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              whileHover={{ y: -8, scale: 1.02 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ y: -4 }}
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-20 h-20 bg-[#96e3d8] rounded-2xl flex items-center justify-center shadow-lg mb-6">
@@ -68,11 +68,11 @@ className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl t
 
             <motion.div
 className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 group p-8"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              whileHover={{ y: -8, scale: 1.02 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ y: -4 }}
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-20 h-20 bg-[#96e3d8] rounded-2xl flex items-center justify-center shadow-lg mb-6">

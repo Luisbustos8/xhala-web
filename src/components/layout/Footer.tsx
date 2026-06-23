@@ -21,9 +21,10 @@ const Footer = () => {
       { name: 'Contacto', href: '#contacto' },
     ],
     legal: [
-      { name: 'Política de Privacidad', href: '#' },
-      { name: 'Términos de Servicio', href: '#' },
-      { name: 'Aviso Legal', href: '#' },
+      { name: 'Política de Privacidad', href: '/privacidad' },
+      { name: 'Términos de Servicio', href: '/terminos' },
+      { name: 'Aviso Legal', href: '/aviso-legal' },
+      { name: 'Política de Cookies', href: '/cookies' },
     ],
   };
 
@@ -112,37 +113,39 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-
-          <div className="mt-12 pt-8 border-t border-white/10">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="flex flex-col md:flex-row items-center gap-4">
-                <p className="text-gray-400 text-sm">
-                  © {currentYear} {siteConfig.name}. Todos los derechos reservados.
-                </p>
+        </div>
+      </Container>
+      
+      <div className="bg-black border-t border-white/10">
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <p className="text-gray-400 text-sm">
+                © {currentYear} {siteConfig.name}. Todos los derechos reservados.
+              </p>
+              <a
+                href="https://www.malt.es/profile/luisbustos?origin=site_nav_bar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-[#96e3d8] transition-colors text-xs"
+              >
+                Desarrollado por Luis Bustos
+              </a>
+            </div>
+            <div className="flex gap-6 flex-wrap justify-center md:justify-end">
+              {footerLinks.legal.map((link) => (
                 <a
-                  href="https://www.malt.es/profile/luisbustos?origin=site_nav_bar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-[#96e3d8] transition-colors text-xs"
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
-                  Desarrollado por Luis Bustos
+                  {link.name}
                 </a>
-              </div>
-              <div className="flex gap-6">
-                {footerLinks.legal.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 };

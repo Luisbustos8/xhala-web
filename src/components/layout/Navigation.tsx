@@ -27,7 +27,7 @@ const Navigation = () => {
     { name: 'Contacto', href: '#contacto' },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
@@ -75,7 +75,7 @@ const Navigation = () => {
                 {item.name}
               </motion.a>
             ))}
-            <Button size="md">Reservar Cita</Button>
+            <Button size="md" onClick={(e) => handleNavClick(e, '#contacto')}>Contactar</Button>
           </nav>
 
           <button
@@ -134,7 +134,7 @@ const Navigation = () => {
                   {item.name}
                 </motion.a>
               ))}
-              <Button className="w-full" size="lg">Reservar Cita</Button>
+              <Button className="w-full" size="lg" onClick={(e) => handleNavClick(e, '#contacto')}>Contactar</Button>
             </div>
           </motion.div>
         )}
