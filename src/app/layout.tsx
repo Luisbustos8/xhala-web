@@ -21,6 +21,7 @@ const dancingScript = Dancing_Script({
   variable: "--font-dancing-script",
   subsets: ["latin"],
   weight: "400",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -63,6 +64,7 @@ export const metadata: Metadata = {
     description: "Centro especializado en Pilates terapéutico, Pilates en suelo, Osteopatía y Barre. Mejora tu salud y bienestar físico a través del movimiento consciente.",
     images: ["/og-image.jpg"],
   },
+  metadataBase: new URL('https://xhalapilates.com'),
 };
 
 export const viewport = {
@@ -81,6 +83,10 @@ export default function RootLayout({
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className="min-h-full flex flex-col">
         <JsonLd data={organizationSchema} />
         <JsonLd data={localBusinessSchema} />
