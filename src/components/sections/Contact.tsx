@@ -53,7 +53,7 @@ const Contact = () => {
       <Container>
         <div className="text-center mb-16 relative z-10">
           <Heading level="h2" className="mb-4">
-            Contacta con Nosotros
+            Contacta con Xhala
           </Heading>
           <motion.p
             className="text-xl text-gray-600 max-w-2xl mx-auto"
@@ -62,8 +62,16 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            Estamos aquí para ayudarte. Cuéntanos tus objetivos y te contactaremos 
-            para diseñar el plan perfecto para ti.
+            Si quieres empezar, tienes dudas sobre qué disciplina puede encajar mejor contigo o necesitas más información, estaremos encantadas de ayudarte.
+          </motion.p>
+          <motion.p
+            className="text-lg text-gray-500 max-w-2xl mx-auto mt-4"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            Cuéntanos en qué momento estás, qué necesitas o qué te gustaría trabajar, y te orientaremos para que encuentres la opción más adecuada para ti.
           </motion.p>
         </div>
 
@@ -76,7 +84,18 @@ const Contact = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl p-12 rounded-3xl shadow-xl border border-white/50 h-full">
               <h3 className="text-3xl font-bold mb-8 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent">Información de Contacto</h3>
-              
+
+              <div className="mb-8">
+                <p className="text-gray-700 leading-relaxed mb-4">Puedes escribirnos para:</p>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Pedir información sobre clases y horarios</li>
+                  <li>• Consultar disponibilidad</li>
+                  <li>• Reservar una sesión de osteopatía</li>
+                  <li>• Preguntar por pilates prenatal o postparto</li>
+                  <li>• Resolver dudas sobre qué disciplina puede encajar contigo</li>
+                </ul>
+              </div>
+
               <div className="space-y-8">
                 <div className="flex items-start gap-5">
                   <div className="w-14 h-14 bg-[#96e3d8] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
@@ -272,7 +291,7 @@ const Contact = () => {
                   className="w-full bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] hover:from-[#7ac9be] hover:to-[#96e3d8] shadow-xl"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
+                  {isSubmitting ? 'Enviando...' : 'Escríbenos y te ayudamos a empezar'}
                 </Button>
 
                 {submitSuccess && (

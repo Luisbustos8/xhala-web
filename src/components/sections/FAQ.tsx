@@ -11,43 +11,78 @@ import { faqSchema } from '@/lib/structured-data';
 const faqs = [
   {
     id: 1,
-    question: '¿Qué es el Pilates terapéutico?',
-    answer: 'El Pilates terapéutico es una adaptación del método Pilates tradicional, diseñado específicamente para tratar condiciones físicas y dolores. Se centra en ejercicios personalizados que ayudan a rehabilitar lesiones, mejorar la postura y aliviar el dolor crónico bajo la supervisión de profesionales especializados.',
+    question: 'Nunca he hecho pilates, ¿puedo empezar en Xhala?',
+    answer: 'Sí. Muchas personas llegan sin experiencia previa. Adaptamos el trabajo al nivel de cada persona para que puedas empezar con seguridad, entendiendo bien la técnica y avanzando poco a poco.',
   },
   {
     id: 2,
-    question: '¿En qué se diferencia la osteopatía de la fisioterapia?',
-    answer: 'La osteopatía se enfoca en el cuerpo como un todo, tratando no solo los síntomas sino también las causas subyacentes. Utiliza técnicas manuales para restaurar el equilibrio y la movilidad del cuerpo. Mientras que la fisioterapia suele ser más específica para la rehabilitación de lesiones, la osteopatía adopta un enfoque más holístico.',
+    question: '¿Qué disciplina me recomendáis si quiero tonificar y ganar fuerza?',
+    answer: 'Depende de tu punto de partida y de lo que estés buscando. Pilates máquinas, pilates suelo y barre pueden ayudarte a ganar fuerza, tonificar y mejorar el control corporal. Si no tienes claro qué opción encaja mejor contigo, escríbenos y te orientamos.',
   },
   {
     id: 3,
-    question: '¿Necesito experiencia previa para empezar Pilates?',
-    answer: 'No necesitas experiencia previa. Nuestros programas están diseñados para todos los niveles, desde principiantes hasta avanzados. En la primera sesión evaluamos tu condición física y adaptamos los ejercicios a tus necesidades y capacidades.',
+    question: '¿Y si tengo dolor de espalda, una lesión o alguna patología?',
+    answer: 'En Xhala trabajamos con grupos reducidos y profesionales formados, por lo que podemos adaptar las sesiones a muchas necesidades específicas. Si tienes una lesión, dolor o patología, lo ideal es que nos lo cuentes antes para valorar tu caso y orientarte bien.',
   },
   {
     id: 4,
-    question: '¿Cuántas sesiones se recomiendan para ver resultados?',
-    answer: 'La mayoría de los clientes comienzan a notar mejoras después de 4-6 sesiones. Sin embargo, esto varía según la condición y los objetivos. Para resultados óptimos, recomendamos 1-2 sesiones semanales durante los primeros 2-3 meses, luego podemos ajustar la frecuencia según tu progreso.',
+    question: '¿Las clases son en grupo o individuales?',
+    answer: 'Trabajamos principalmente en grupos reducidos, para poder ofrecer una atención cercana, supervisión y adaptación real durante la clase.',
   },
   {
     id: 5,
-    question: '¿Tratáis embarazadas y postparto?',
-    answer: 'Sí, ofrecemos programas especializados para embarazadas y mujeres en postparto. Nuestros profesionales están certificados en salud pélvica y diseñan ejercicios seguros y efectivos para cada etapa. Es importante obtener el visto bueno de tu médico antes de comenzar.',
+    question: '¿Cuántas personas hay por clase?',
+    answer: 'En Xhala apostamos por grupos pequeños para cuidar la calidad de la sesión y la atención a cada persona.',
   },
   {
     id: 6,
-    question: '¿Qué debo llevar a mi primera sesión?',
-    answer: 'Para tu primera sesión, te recomendamos llevar ropa cómoda que permita el movimiento (leggings, camiseta deportiva), calcetines antideslizantes si los tienes, y una toalla. Si tienes informes médicos previos relacionados con tu condición, tráyelos para que podamos tener una visión completa.',
+    question: '¿Puedo combinar varias disciplinas?',
+    answer: 'Sí. Puedes combinar diferentes disciplinas según tus objetivos, tu disponibilidad y lo que tu cuerpo necesite en cada momento.',
   },
   {
     id: 7,
-    question: '¿Aceptáis seguros médicos?',
-    answer: 'Trabajamos con varias compañías de seguros. Te recomendamos contactar con tu aseguradora para verificar la cobertura. También ofrecemos facturación detallada que puedes presentar para reembolso. Contáctanos para más información sobre convenios específicos.',
+    question: '¿Qué diferencia hay entre pilates suelo y pilates máquinas?',
+    answer: 'Ambos trabajan fuerza, control, postura y movilidad, pero las máquinas permiten un trabajo muy versátil gracias a la resistencia y asistencia que ofrecen. El pilates suelo se centra más en el control corporal desde colchoneta y material de apoyo. Según cada persona, una opción puede encajar mejor o complementarse muy bien con la otra.',
   },
   {
     id: 8,
-    question: '¿Podéis ayudar con dolor de espalda crónico?',
-    answer: 'Absolutamente. El dolor de espalda crónico es una de las especialidades que más tratamos. Combinamos osteopatía para aliviar el dolor agudo y Pilates terapéutico para fortalecer los músculos de soporte y prevenir recurrencias. Muchos de nuestros clientes han encontrado alivio significativo.',
+    question: '¿Puedo hacer pilates si llevo tiempo sin hacer ejercicio?',
+    answer: 'Sí. De hecho, muchas personas empiezan en Xhala después de un tiempo de parón. Lo importante es comenzar con una práctica bien guiada y adaptada.',
+  },
+  {
+    id: 9,
+    question: '¿Tenéis clases para embarazadas?',
+    answer: 'Sí. Contamos con pilates prenatal, pensado para acompañar el embarazo desde el movimiento, la fuerza, la movilidad y el bienestar.',
+  },
+  {
+    id: 10,
+    question: '¿Y clases para postparto?',
+    answer: 'Sí. Tenemos clases de mamás & bebés enfocadas a la recuperación postparto, para ayudarte a cuidar tu cuerpo y volver a conectar contigo en esta etapa.',
+  },
+  {
+    id: 11,
+    question: '¿Puedo ir con mi bebé a las clases de postparto?',
+    answer: 'Sí, ese es precisamente el sentido de este espacio: que puedas cuidarte y moverte acompañada de tu bebé.',
+  },
+  {
+    id: 12,
+    question: '¿La osteopatía se puede combinar con las clases?',
+    answer: 'Sí. De hecho, en muchos casos ambas cosas se complementan muy bien, porque el tratamiento manual y el trabajo de movimiento pueden ayudarte desde diferentes ángulos.',
+  },
+  {
+    id: 13,
+    question: '¿Cómo sé si necesito osteopatía o una clase?',
+    answer: 'Dependerá de tu caso. Si lo que buscas es aliviar una molestia concreta o valorar un dolor, quizá tenga más sentido empezar por osteopatía. Si buscas trabajar fuerza, postura, movilidad o retomar ejercicio, probablemente encaje mejor una clase. Si tienes dudas, escríbenos y te orientamos.',
+  },
+  {
+    id: 14,
+    question: '¿Cómo puedo pedir información o reservar?',
+    answer: 'Puedes escribirnos a través del formulario de contacto, por teléfono o por WhatsApp, y te ayudaremos a encontrar la opción que mejor encaje contigo.',
+  },
+  {
+    id: 15,
+    question: '¿Dónde está Xhala?',
+    answer: 'Estamos en Navalcarnero.',
   },
 ];
 

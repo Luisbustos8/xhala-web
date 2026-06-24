@@ -10,34 +10,39 @@ import { BrainIcon, EnergyIcon, Mobility, MuscleIcon, PainIcon, YogaIcon } from 
 
 const benefits = [
   {
-    icon: <PainIcon />,
-    title: 'Reducción del Dolor',
-    description: 'Alivia el dolor musculoesquelético en espalda, cuello, hombros y zona lumbar mediante tratamientos especializados.',
-  },
-  {
     icon: <YogaIcon />,
-    title: 'Mejora de Postura',
-    description: 'Corrige desequilibrios posturales y mejora tu alineación corporal para una vida más saludable y sin dolor.',
+    title: 'Mejorar la postura y la alineación corporal',
+    description: 'Trabajamos para corregir desequilibrios y ayudarte a mantener una postura saludable en tu día a día.',
   },
   {
     icon: <MuscleIcon />,
-    title: 'Prevención de Lesiones',
-    description: 'Fortalece tu cuerpo y aumenta la conciencia corporal para prevenir lesiones futuras.',
+    title: 'Ganar fuerza, estabilidad y control',
+    description: 'Desarrollamos tu musculatura profunda y mejoramos tu estabilidad para un movimiento más seguro y eficiente.',
   },
   {
     icon: <Mobility />,
-    title: 'Rehabilitación Funcional',
-    description: 'Recupera la movilidad y funcionalidad tras lesiones o sobrecargas con programas personalizados.',
+    title: 'Recuperar movilidad y flexibilidad',
+    description: 'Ayudamos a tu cuerpo a moverse con mayor libertad y amplitud de movimiento.',
   },
   {
-    icon: <EnergyIcon />,
-    title: 'Mayor Energía',
-    description: 'Aumenta tu vitalidad y energía diaria a través del movimiento consciente y el equilibrio físico.',
+    icon: <PainIcon />,
+    title: 'Aliviar tensiones y sobrecargas',
+    description: 'Liberamos las tensiones acumuladas y trabajamos para reducir las molestias físicas.',
   },
   {
     icon: <BrainIcon />,
-    title: 'Conciencia Corporal',
-    description: 'Desarrolla una mayor conexión mente-cuerpo para entender y mejorar tu movimiento.',
+    title: 'Prevenir molestias y compensaciones',
+    description: 'Enseñamos a tu cuerpo a moverse de forma más equilibrada para evitar futuras lesiones.',
+  },
+  {
+    icon: <EnergyIcon />,
+    title: 'Mejorar la conciencia corporal',
+    description: 'Desarrollamos una mayor conexión con tu cuerpo para entender y mejorar tu movimiento.',
+  },
+  {
+    icon: <YogaIcon />,
+    title: 'Ayudarte a sentirte más ágil, fuerte y conectada con tu cuerpo',
+    description: 'Nuestro objetivo final es que te sientas mejor, más capaz y más en sintonía contigo misma.',
   },
 ];
 
@@ -47,7 +52,7 @@ const Benefits = () => {
       <Container>
         <div className="text-center mb-16">
           <Heading level="h2" className="mb-4">
-            Beneficios del Pilates y Osteopatía
+            Lo que buscamos en cada sesión
           </Heading>
           <motion.p
             className="text-xl text-gray-600 max-w-2xl mx-auto"
@@ -56,8 +61,7 @@ const Benefits = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            Descubre cómo nuestra combinación de Pilates terapéutico y osteopatía 
-            puede transformar tu salud y bienestar.
+            Nuestro enfoque está diseñado para ayudarte a mejorar de forma integral y sostenible.
           </motion.p>
         </div>
 

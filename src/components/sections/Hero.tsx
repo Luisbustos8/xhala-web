@@ -33,7 +33,7 @@ const Hero = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
             >
-              Centro de Salud y Bienestar
+              Centro de Pilates y Osteopatía en Navalcarnero
             </motion.span>
           </motion.div>
 
@@ -44,9 +44,7 @@ const Hero = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight"
             >
-              Transforma tu cuerpo con{' '}
-              <span className="bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent">Pilates</span> y{' '}
-              <span className="bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent">Osteopatía</span>
+              Movimiento, fuerza y cuidado para sentirte bien en tu cuerpo
             </motion.div>
           </Heading>
 
@@ -56,8 +54,16 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Mejora tu salud y bienestar físico a través del movimiento consciente 
-            y el tratamiento manual. Reduce el dolor, mejora tu postura y recupera tu vitalidad.
+            Pilates máquinas, pilates suelo, barre, osteopatía, prenatal, postparto y presoterapia en Navalcarnero.
+          </motion.p>
+
+          <motion.p
+            className="mt-6 text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed font-light"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+          >
+            En Xhala trabajamos desde una visión global del cuerpo, combinando ejercicio, control, fuerza y cuidado terapéutico para ayudarte a sentirte mejor en tu día a día.
           </motion.p>
 
           <motion.div
@@ -66,20 +72,20 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               onClick={scrollToContact}
               className="bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] hover:from-[#7ac9be] hover:to-[#96e3d8] shadow-xl"
             >
-              Reserva tu Primera Cita
+              Quiero información
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              onClick={() => document.querySelector('#disciplinas')?.scrollIntoView({ behavior: 'smooth' })}
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={scrollToContact}
               className="border-2 border-[#96e3d8] hover:bg-[#96e3d8]/10"
             >
-              Descubre Nuestras Disciplinas
+              Reservar / Contactar
             </Button>
           </motion.div>
         </div>

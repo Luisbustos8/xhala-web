@@ -9,39 +9,27 @@ import Section from '@/components/ui/Section';
 const processSteps = [
   {
     step: 1,
-    title: 'Primera Consulta',
-    description: 'Evaluación inicial completa donde analizamos tu historial, objetivos y necesidades específicas. Te explicamos nuestro enfoque y respondemos todas tus dudas.',
-    icon: '👋',
+    title: 'Grupos reducidos',
+    description: 'Nos permiten observar mejor, corregir, adaptar y ofrecer una atención mucho más personalizada.',
+    icon: '�',
   },
   {
     step: 2,
-    title: 'Valoración Personalizada',
-    description: 'Realizamos una evaluación física detallada para identificar desequilibrios, limitaciones y áreas de mejora. Creamos un plan adaptado a ti.',
-    icon: '🔍',
+    title: 'Adaptación real',
+    description: 'Cada cuerpo parte de un punto distinto. Adaptamos el trabajo al nivel, la experiencia, las molestias, el momento vital y las necesidades de cada persona.',
+    icon: '🎯',
   },
   {
     step: 3,
-    title: 'Plan de Tratamiento',
-    description: 'Diseñamos un programa personalizado combinando Pilates terapéutico y osteopatía según tus necesidades. Establecemos objetivos medibles.',
-    icon: '📋',
+    title: 'Formación y supervisión',
+    description: 'Todas las sesiones están guiadas por profesionales formados, con experiencia en movimiento y cuidado corporal.',
+    icon: '�',
   },
   {
     step: 4,
-    title: 'Sesiones de Trabajo',
-    description: 'Comenzamos las sesiones con seguimiento continuo. Ajustamos el programa según tu evolución y feedback para optimizar resultados.',
-    icon: '💪',
-  },
-  {
-    step: 5,
-    title: 'Evaluación de Progreso',
-    description: 'Revisamos periódicamente tu evolución con mediciones objetivas. Celebramos los logros y ajustamos objetivos según sea necesario.',
-    icon: '📈',
-  },
-  {
-    step: 6,
-    title: 'Mantenimiento y Prevención',
-    description: 'Una vez alcanzados los objetivos, te proporcionamos herramientas para mantener los resultados y prevenir futuras lesiones.',
-    icon: '🎯',
+    title: 'Visión global',
+    description: 'Nos gusta combinar ejercicio y tratamiento cuando hace falta, porque muchas veces el cuerpo necesita ambas cosas para mejorar.',
+    icon: '�',
   },
 ];
 
@@ -51,7 +39,7 @@ const Process = () => {
       <Container>
         <div className="text-center mb-16">
           <Heading level="h2" className="mb-4">
-            Nuestro Proceso de Trabajo
+            Nuestra forma de trabajar
           </Heading>
           <motion.p
             className="text-xl text-gray-600 max-w-2xl mx-auto"
@@ -60,8 +48,8 @@ const Process = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            Un método estructurado y personalizado para garantizar los mejores resultados 
-            en tu camino hacia el bienestar.
+            En Xhala apostamos por un trabajo cercano, consciente y bien guiado.
+            No entendemos las clases como un entrenamiento impersonal, sino como un espacio donde cada persona pueda moverse con seguridad, mejorar de verdad y sentirse acompañada.
           </motion.p>
         </div>
 
@@ -106,17 +94,6 @@ const Process = () => {
           </div>
         </div>
 
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-        >
-          <p className="text-lg text-gray-600 mb-6">
-            Listo para comenzar tu transformación?
-          </p>
-        </motion.div>
       </Container>
     </Section>
   );

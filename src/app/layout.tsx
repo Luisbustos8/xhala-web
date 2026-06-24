@@ -25,9 +25,9 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: "Xhala Pilates y Osteopatía | Centro de Salud y Bienestar en España",
-  description: "Centro especializado en Pilates terapéutico, Pilates en suelo, Osteopatía y Barre. Mejora tu salud y bienestar físico a través del movimiento consciente y el tratamiento manual en Xhala.",
-  keywords: ["Pilates", "Osteopatía", "Pilates terapéutico", "Pilates en suelo", "Barre", "Rehabilitación física", "Bienestar", "Salud", "Tratamiento manual", "Dolor de espalda", "Postura", "Movimiento consciente", "Prevención de lesiones", "Suelo pélvico", "Pilates Madrid", "Osteopatía Madrid"],
+  title: "Xhala Pilates y Osteopatía en Navalcarnero | Centro de Bienestar Integral",
+  description: "Pilates máquinas, pilates suelo, barre, osteopatía, prenatal, postparto y presoterapia en Navalcarnero. Movimiento, fuerza y cuidado para sentirte bien en tu cuerpo. Grupos reducidos y atención personalizada.",
+  keywords: ["Pilates máquinas", "Pilates suelo", "Barre", "Osteopatía", "Pilates prenatal", "Postparto", "Mamás y bebés", "Presoterapia", "Navalcarnero", "Pilates Madrid", "Osteopatía Madrid", "Bienestar", "Salud", "Dolor de espalda", "Postura", "Movimiento consciente", "Rehabilitación", "Suelo pélvico", "Reformer", "Torre", "Wunda chair"],
   authors: [{ name: "Xhala Pilates y Osteopatía" }],
   creator: "Xhala Pilates y Osteopatía",
   publisher: "Xhala Pilates y Osteopatía",
@@ -46,22 +46,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     url: "https://xhalapilates.com",
-    title: "Xhala Pilates y Osteopatía | Centro de Salud y Bienestar en España",
-    description: "Centro especializado en Pilates terapéutico, Pilates en suelo, Osteopatía y Barre. Mejora tu salud y bienestar físico a través del movimiento consciente.",
+    title: "Xhala Pilates y Osteopatía en Navalcarnero | Centro de Bienestar Integral",
+    description: "Pilates máquinas, pilates suelo, barre, osteopatía, prenatal, postparto y presoterapia en Navalcarnero. Movimiento, fuerza y cuidado para sentirte bien en tu cuerpo.",
     siteName: "Xhala Pilates y Osteopatía",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Xhala Pilates y Osteopatía - Centro de Salud y Bienestar",
+        alt: "Xhala Pilates y Osteopatía - Centro de Bienestar en Navalcarnero",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Xhala Pilates y Osteopatía | Centro de Salud y Bienestar en España",
-    description: "Centro especializado en Pilates terapéutico, Pilates en suelo, Osteopatía y Barre. Mejora tu salud y bienestar físico a través del movimiento consciente.",
+    title: "Xhala Pilates y Osteopatía en Navalcarnero | Centro de Bienestar Integral",
+    description: "Pilates máquinas, pilates suelo, barre, osteopatía, prenatal, postparto y presoterapia en Navalcarnero. Movimiento, fuerza y cuidado para sentirte bien en tu cuerpo.",
     images: ["/og-image.jpg"],
   },
   metadataBase: new URL('https://xhalapilates.com'),

@@ -9,44 +9,23 @@ import Section from '@/components/ui/Section';
 const testimonials = [
   {
     id: 1,
-    name: 'María García',
-    role: 'Profesora',
-    content: 'Después de años con dolor de espalda por trabajar sentada, el Pilates terapéutico ha cambiado mi vida. Mi postura ha mejorado increíblemente y el dolor ha desaparecido.',
+    name: 'Loli',
+    role: 'Alumna',
+    content: 'Llegué con dolor de espalda y desde que voy me encuentro mucho mejor. Las clases son súper cuidadas y se nota muchísimo la atención personalizada.',
     rating: 5,
   },
   {
     id: 2,
-    name: 'Carlos Rodríguez',
-    role: 'Deportista',
-    content: 'La combinación de osteopatía y Pilates me ha ayudado a recuperarme de una lesión de rodilla mucho más rápido de lo esperado. Profesionalidad excepcional.',
+    name: 'Rosa',
+    role: 'Alumna',
+    content: 'Xhala se ha convertido en mi momento de la semana. Me siento más fuerte, más ágil y muchísimo mejor en mi cuerpo.',
     rating: 5,
   },
   {
     id: 3,
-    name: 'Ana Martínez',
-    role: 'Madre',
-    content: 'Las sesiones de suelo pélvico postparto fueron fundamentales para mi recuperación. Me sentí comprendida y acompañada en todo momento. ¡100% recomendable!',
-    rating: 5,
-  },
-  {
-    id: 4,
-    name: 'Pedro Sánchez',
-    role: 'Empresario',
-    content: 'El estrés y la tensión acumulada desaparecieron tras las sesiones de osteopatía. Ahora duermo mejor y tengo más energía durante el día.',
-    rating: 5,
-  },
-  {
-    id: 5,
-    name: 'Laura López',
-    role: 'Diseñadora',
-    content: 'Las clases de Pilates en grupo son perfectas. El ambiente es relajado y los profesores se adaptan a cada nivel. He mejorado mi fuerza y flexibilidad.',
-    rating: 5,
-  },
-  {
-    id: 6,
-    name: 'Miguel Fernández',
-    role: 'Programador',
-    content: 'La reeducación postural me ha enseñado a cuidar mi cuerpo mientras trabajo. Ya no tengo dolor de cuello ni hombros al final del día.',
+    name: 'Isabel',
+    role: 'Alumna',
+    content: 'El trato es increíble y se nota que están pendientes de cada persona. No es solo una clase, es un espacio donde de verdad te cuidan.',
     rating: 5,
   },
 ];
@@ -57,7 +36,7 @@ const Testimonials = () => {
       <Container>
         <div className="text-center mb-16">
           <Heading level="h2" className="mb-4">
-            Lo Que Dicen Nuestros Clientes
+            Lo que viven en Xhala
           </Heading>
           <motion.p
             className="text-xl text-gray-600 max-w-2xl mx-auto"
@@ -66,8 +45,16 @@ const Testimonials = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            Descubre las experiencias de personas que han transformado su salud 
-            y bienestar con nosotros.
+            Más que una clase, buscamos que cada persona encuentre un espacio donde cuidarse, moverse mejor y sentirse acompañada.
+          </motion.p>
+          <motion.p
+            className="text-lg text-gray-500 max-w-2xl mx-auto mt-4"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            La experiencia de quienes confían en Xhala habla de fuerza, alivio, bienestar, cercanía y confianza.
           </motion.p>
         </div>
 
@@ -105,18 +92,6 @@ const Testimonials = () => {
           ))}
         </div>
 
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-        >
-          <div className="inline-flex items-center gap-2 bg-[#96e3d8]/20 px-6 py-3 rounded-full">
-            <span className="text-2xl font-bold text-[#96e3d8]">4.9/5</span>
-            <span className="text-gray-600">basado en 200+ reseñas</span>
-          </div>
-        </motion.div>
       </Container>
     </Section>
   );
