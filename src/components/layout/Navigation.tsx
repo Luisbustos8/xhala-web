@@ -9,6 +9,7 @@ import Image from 'next/image';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,13 +21,23 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Sobre Nosotros', href: '#sobre-nosotros' },
-    { name: 'Para quién es', href: '#para-quien-es' },
-    { name: 'Disciplinas', href: '#disciplinas' },
-    { name: 'Servicios', href: '#servicios-detallados' },
-    { name: 'Cómo trabajamos', href: '#proceso' },
-    { name: 'Equipo', href: '#equipo' },
-    { name: 'Testimonios', href: '#testimonios' },
-    { name: 'FAQ', href: '#faq' },
+    {
+      name: 'Disciplinas',
+      dropdown: [
+        { name: 'Para quién es', href: '#para-quien-es' },
+        { name: 'Nuestras Disciplinas', href: '#disciplinas' },
+      ],
+    },
+    {
+      name: 'Servicios',
+      dropdown: [
+        { name: 'Servicios Detallados', href: '#servicios-detallados' },
+        { name: 'Cómo Trabajamos', href: '#proceso' },
+        { name: 'Equipo', href: '#equipo' },
+        { name: 'Testimonios', href: '#testimonios' },
+        { name: 'FAQ', href: '#faq' },
+      ],
+    },
     { name: 'Contacto', href: '#contacto' },
   ];
 
@@ -36,7 +47,20 @@ const Navigation = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMobileMenuOpen(false);
+      setOpenDropdown(null);
     }
+  };
+
+  const handleDropdownToggle = (name: string) => {
+    setOpenDropdown(openDropdown === name ? null : name);
+  };
+
+  const handleDropdownEnter = (name: string) => {
+    setOpenDropdown(name);
+  };
+
+  const handleDropdownLeave = () => {
+    setOpenDropdown(null);
   };
 
   return (
@@ -53,30 +77,77 @@ const Navigation = () => {
           <motion.a
             href="#hero"
             onClick={(e) => handleNavClick(e, '#hero')}
-            className="pl-4"
+            className="flex items-center gap-3"
             whileHover={{ scale: 1.05 }}
             aria-label="Xhala Pilates y Osteopatía - Ir al inicio"
           >
             <Image 
               src="/icon.png" 
               alt="Xhala Pilates y Osteopatía" 
-              width={80}
-              height={80}
+              width={150}
+              height={150}
               className="h-20 w-auto"
             />
+           
           </motion.a>
 
-          <nav className="hidden md:flex items-center space-x-10 pr-4" aria-label="Navegación principal">
+          <nav className="hidden md:flex items-center space-x-8 pr-4" aria-label="Navegación principal">
             {navItems.map((item) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
-                className="text-base font-medium text-black hover:text-[#96e3d8] transition-colors px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#96e3d8] focus:ring-offset-2 rounded-lg"
-                whileHover={{ y: -2 }}
-              >
-                {item.name}
-              </motion.a>
+              <div key={item.name} className="relative">
+                {item.dropdown ? (
+                  <div
+                    onMouseEnter={() => handleDropdownEnter(item.name)}
+                    onMouseLeave={handleDropdownLeave}
+                    className="relative"
+                  >
+                    <motion.button
+                      className="text-base font-medium text-black hover:text-[#96e3d8] transition-colors px-4 py-2 focus:outline-none rounded-lg flex items-center gap-1"
+                      whileHover={{ y: -2 }}
+                    >
+                      {item.name}
+                      <svg
+                        className={`w-4 h-4 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </motion.button>
+                    <AnimatePresence>
+                      {openDropdown === item.name && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
+                          className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
+                        >
+                          {item.dropdown.map((subItem) => (
+                            <motion.a
+                              key={subItem.name}
+                              href={subItem.href}
+                              onClick={(e) => handleNavClick(e, subItem.href)}
+                              className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#96e3d8]/10 hover:text-[#96e3d8] transition-colors"
+                              whileHover={{ x: 5 }}
+                            >
+                              {subItem.name}
+                            </motion.a>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <motion.a
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className="text-base font-medium text-black hover:text-[#96e3d8] transition-colors px-4 py-2 focus:outline-none rounded-lg"
+                    whileHover={{ y: -2 }}
+                  >
+                    {item.name}
+                  </motion.a>
+                )}
+              </div>
             ))}
             <Button size="md" onClick={(e) => handleNavClick(e, '#contacto')}>Contactar</Button>
           </nav>
@@ -125,19 +196,61 @@ const Navigation = () => {
             role="navigation"
             aria-label="Menú móvil"
           >
-            <div className="px-6 py-8 space-y-6">
+            <div className="px-6 py-8 space-y-4">
               {navItems.map((item) => (
-                <motion.a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
-                  className="block text-lg font-medium text-black hover:text-[#96e3d8] transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-[#96e3d8] focus:ring-offset-2 rounded-lg"
-                  whileHover={{ x: 10 }}
-                >
-                  {item.name}
-                </motion.a>
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <>
+                      <button
+                        onClick={() => handleDropdownToggle(item.name)}
+                        className="w-full text-left text-lg font-medium text-black hover:text-[#96e3d8] transition-colors py-2 focus:outline-none rounded-lg flex items-center justify-between"
+                      >
+                        {item.name}
+                        <svg
+                          className={`w-4 h-4 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      <AnimatePresence>
+                        {openDropdown === item.name && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="pl-4 space-y-2"
+                          >
+                            {item.dropdown.map((subItem) => (
+                              <motion.a
+                                key={subItem.name}
+                                href={subItem.href}
+                                onClick={(e) => handleNavClick(e, subItem.href)}
+                                className="block text-base text-gray-600 hover:text-[#96e3d8] transition-colors py-2"
+                                whileHover={{ x: 5 }}
+                              >
+                                {subItem.name}
+                              </motion.a>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
+                  ) : (
+                    <motion.a
+                      href={item.href}
+                      onClick={(e) => handleNavClick(e, item.href)}
+                      className="block text-lg font-medium text-black hover:text-[#96e3d8] transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-[#96e3d8] focus:ring-offset-2 rounded-lg"
+                      whileHover={{ x: 5 }}
+                    >
+                      {item.name}
+                    </motion.a>
+                  )}
+                </div>
               ))}
-              <Button className="w-full" size="lg" onClick={(e) => handleNavClick(e, '#contacto')}>Contactar</Button>
+              <Button className="w-full mt-6" size="lg" onClick={(e) => handleNavClick(e, '#contacto')}>Contactar</Button>
             </div>
           </motion.div>
         )}
