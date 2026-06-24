@@ -20,10 +20,13 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Sobre Nosotros', href: '#sobre-nosotros' },
+    { name: 'Para quién es', href: '#para-quien-es' },
     { name: 'Disciplinas', href: '#disciplinas' },
     { name: 'Servicios', href: '#servicios-detallados' },
-    { name: 'Osteopatía', href: '#osteopatia' },
+    { name: 'Cómo trabajamos', href: '#proceso' },
     { name: 'Equipo', href: '#equipo' },
+    { name: 'Testimonios', href: '#testimonios' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Contacto', href: '#contacto' },
   ];
 
