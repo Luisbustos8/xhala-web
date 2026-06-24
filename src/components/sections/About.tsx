@@ -48,11 +48,28 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="relative h-64 rounded-3xl overflow-hidden shadow-xl">
+              <div className="absolute inset-0 bg-[url('/hall.jpeg')] bg-cover bg-center bg-no-repeat" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#96e3d8]/30 to-transparent" />
+            </div>
+            <div className="relative h-64 rounded-3xl overflow-hidden shadow-xl">
+              <div className="absolute inset-0 bg-[url('/sala1.jpeg')] bg-cover bg-center bg-no-repeat" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#96e3d8]/30 to-transparent" />
+            </div>
+          </motion.div>
+
+          <div className="space-y-8 mb-12">
             <motion.div
-              className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 group p-10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 group p-10 md:w-3/4"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
               whileHover={{ y: -4 }}
@@ -76,9 +93,9 @@ const About = () => {
             </motion.div>
 
             <motion.div
-              className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 group p-10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 group p-10 md:w-3/4 md:ml-auto"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
               whileHover={{ y: -4 }}

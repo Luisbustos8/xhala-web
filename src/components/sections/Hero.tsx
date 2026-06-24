@@ -14,7 +14,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-[100vh] flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-[#96e3d8]/10 pt-42 pb-16 relative overflow-hidden">
+    <section id="hero" className="min-h-[100vh] flex items-center justify-center pt-42 pb-16 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-[#96e3d8]/10" />
+      <div className="absolute inset-0 bg-[url('/salaPilatesMaquina.jpeg')] bg-cover bg-center bg-no-repeat opacity-20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-gray-50/90 to-[#96e3d8]/20" />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#96e3d8]/20 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#96e3d8]/10 rounded-full blur-3xl" />

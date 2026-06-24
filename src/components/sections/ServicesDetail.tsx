@@ -19,17 +19,22 @@ const ServicesDetail = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white/90 backdrop-blur-xl p-12 rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50">
-              <div className="flex items-center gap-6 mb-8">
-                <div className="flex items-center justify-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
-                    <PilatesIcon className="w-12 h-12 text-white" />
-                  </div>
-                </div>
-                <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
-                  Pilates máquinas
-                </Heading>
+            <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 overflow-hidden">
+              <div className="relative h-64 bg-gradient-to-br from-[#96e3d8]/20 to-[#7ac9be]/20">
+                <div className="absolute inset-0 bg-[url('/salaPilatesMaquina.jpeg')] bg-cover bg-center bg-no-repeat"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent" />
               </div>
+              <div className="p-12">
+                <div className="flex items-center gap-6 mb-8">
+                  <div className="flex items-center justify-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
+                      <PilatesIcon className="w-12 h-12 text-white" />
+                    </div>
+                  </div>
+                  <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
+                    Pilates máquinas
+                  </Heading>
+                </div>
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
                   El pilates máquinas es una disciplina muy completa que trabaja el cuerpo de forma global a través de ejercicios guiados en reformer, torre y wunda chair.
@@ -74,6 +79,7 @@ const ServicesDetail = () => {
                   </ul>
                 </div>
               </div>
+              </div>
             </div>
           </motion.div>
 
@@ -83,17 +89,22 @@ const ServicesDetail = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white/90 backdrop-blur-xl p-12 rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50">
-              <div className="flex items-center gap-6 mb-8">
-                <div className="flex items-center justify-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
-                    <YogaIcon className="w-12 h-12 text-white" />
-                  </div>
-                </div>
-                <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
-                  Pilates suelo
-                </Heading>
+            <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 overflow-hidden">
+              <div className="relative h-64 bg-gradient-to-br from-[#96e3d8]/20 to-[#7ac9be]/20">
+                <div className="absolute inset-0 bg-[url('/salaPilates.jpeg')] bg-cover bg-center bg-no-repeat"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent" />
               </div>
+              <div className="p-12">
+                <div className="flex items-center gap-6 mb-8">
+                  <div className="flex items-center justify-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
+                      <YogaIcon className="w-12 h-12 text-white" />
+                    </div>
+                  </div>
+                  <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
+                    Pilates suelo
+                  </Heading>
+                </div>
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
                   El pilates suelo es una disciplina basada en el control corporal, la respiración, la estabilidad y la fuerza profunda.
@@ -135,6 +146,7 @@ const ServicesDetail = () => {
                   </ul>
                 </div>
               </div>
+              </div>
             </div>
           </motion.div>
 
@@ -144,17 +156,22 @@ const ServicesDetail = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white/90 backdrop-blur-xl p-12 rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50">
-              <div className="flex items-center gap-6 mb-8">
-                <div className="flex items-center justify-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
-                    <BarreIcon className="w-12 h-12 text-white" />
-                  </div>
-                </div>
-                <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
-                  Barre
-                </Heading>
+            <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 overflow-hidden">
+              <div className="relative h-64 bg-gradient-to-br from-[#96e3d8]/20 to-[#7ac9be]/20">
+                <div className="absolute inset-0 bg-[url('/sala1.jpeg')] bg-cover bg-center bg-no-repeat"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent" />
               </div>
+              <div className="p-12">
+                <div className="flex items-center gap-6 mb-8">
+                  <div className="flex items-center justify-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
+                      <BarreIcon className="w-12 h-12 text-white" />
+                    </div>
+                  </div>
+                  <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
+                    Barre
+                  </Heading>
+                </div>
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Barre es una disciplina dinámica y elegante que combina ejercicios inspirados en la danza, el pilates y el trabajo funcional para fortalecer el cuerpo de forma intensa pero controlada.
@@ -191,6 +208,7 @@ const ServicesDetail = () => {
                   </ul>
                 </div>
               </div>
+              </div>
             </div>
           </motion.div>
 
@@ -200,17 +218,22 @@ const ServicesDetail = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white/90 backdrop-blur-xl p-12 rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50">
-              <div className="flex items-center gap-6 mb-8">
-                <div className="flex items-center justify-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
-                    <PainIcon className="w-12 h-12 text-white" />
-                  </div>
-                </div>
-                <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
-                  Osteopatía
-                </Heading>
+            <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 overflow-hidden">
+              <div className="relative h-64 bg-gradient-to-br from-[#96e3d8]/20 to-[#7ac9be]/20">
+                <div className="absolute inset-0 bg-[url('/hall.jpeg')] bg-cover bg-center bg-no-repeat"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent" />
               </div>
+              <div className="p-12">
+                <div className="flex items-center gap-6 mb-8">
+                  <div className="flex items-center justify-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
+                      <PainIcon className="w-12 h-12 text-white" />
+                    </div>
+                  </div>
+                  <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
+                    Osteopatía
+                  </Heading>
+                </div>
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                   Un enfoque global para entender y cuidar el cuerpo
@@ -293,6 +316,7 @@ const ServicesDetail = () => {
                   </p>
                 </div>
               </div>
+              </div>
             </div>
           </motion.div>
 
@@ -302,17 +326,22 @@ const ServicesDetail = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white/90 backdrop-blur-xl p-12 rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50">
-              <div className="flex items-center gap-6 mb-8">
-                <div className="flex items-center justify-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
-                    <BrainIcon className="w-12 h-12 text-white" />
-                  </div>
-                </div>
-                <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
-                  Pilates prenatal
-                </Heading>
+            <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 overflow-hidden">
+              <div className="relative h-64 bg-gradient-to-br from-[#96e3d8]/20 to-[#7ac9be]/20">
+                <div className="absolute inset-0 bg-[url('/salaPilates.jpeg')] bg-cover bg-center bg-no-repeat"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent" />
               </div>
+              <div className="p-12">
+                <div className="flex items-center gap-6 mb-8">
+                  <div className="flex items-center justify-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
+                      <BrainIcon className="w-12 h-12 text-white" />
+                    </div>
+                  </div>
+                  <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
+                    Pilates prenatal
+                  </Heading>
+                </div>
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
                   El embarazo es una etapa de grandes cambios físicos, emocionales y posturales.
@@ -350,6 +379,7 @@ const ServicesDetail = () => {
                   </p>
                 </div>
               </div>
+              </div>
             </div>
           </motion.div>
 
@@ -359,17 +389,22 @@ const ServicesDetail = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white/90 backdrop-blur-xl p-12 rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50">
-              <div className="flex items-center gap-6 mb-8">
-                <div className="flex items-center justify-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
-                    <EnergyIcon className="w-12 h-12 text-white" />
-                  </div>
-                </div>
-                <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
-                  Mamás & bebés
-                </Heading>
+            <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 overflow-hidden">
+              <div className="relative h-64 bg-gradient-to-br from-[#96e3d8]/20 to-[#7ac9be]/20">
+                <div className="absolute inset-0 bg-[url('/salaPilates.jpeg')] bg-cover bg-center bg-no-repeat"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent" />
               </div>
+              <div className="p-12">
+                <div className="flex items-center gap-6 mb-8">
+                  <div className="flex items-center justify-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
+                      <EnergyIcon className="w-12 h-12 text-white" />
+                    </div>
+                  </div>
+                  <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
+                    Mamás & bebés
+                  </Heading>
+                </div>
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed font-semibold">
                   Movimiento y recuperación para cuidar tu cuerpo en el postparto
@@ -407,6 +442,7 @@ const ServicesDetail = () => {
                   </p>
                 </div>
               </div>
+              </div>
             </div>
           </motion.div>
 
@@ -416,17 +452,22 @@ const ServicesDetail = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white/90 backdrop-blur-xl p-12 rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50">
-              <div className="flex items-center gap-6 mb-8">
-                <div className="flex items-center justify-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
-                    <Mobility className="w-12 h-12 text-white" />
-                  </div>
-                </div>
-                <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
-                  Presoterapia
-                </Heading>
+            <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all border border-white/50 overflow-hidden">
+              <div className="relative h-64 bg-gradient-to-br from-[#96e3d8]/20 to-[#7ac9be]/20">
+                <div className="absolute inset-0 bg-[url('/salaPresoterapia.jpeg')] bg-cover bg-center bg-no-repeat"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent" />
               </div>
+              <div className="p-12">
+                <div className="flex items-center gap-6 mb-8">
+                  <div className="flex items-center justify-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#96e3d8] to-[#7ac9be] rounded-2xl flex items-center justify-center shadow-xl">
+                      <Mobility className="w-12 h-12 text-white" />
+                    </div>
+                  </div>
+                  <Heading level="h3" className="mb-0 bg-gradient-to-r from-[#96e3d8] to-[#7ac9be] bg-clip-text text-transparent font-caveat">
+                    Presoterapia
+                  </Heading>
+                </div>
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
                   La presoterapia es un tratamiento de compresión secuencial que ayuda a estimular el sistema circulatorio y linfático, favoreciendo el drenaje, la sensación de ligereza y el bienestar general.
@@ -462,6 +503,7 @@ const ServicesDetail = () => {
                     <li>• Personas que quieren cuidar la circulación y la sensación de pesadez</li>
                   </ul>
                 </div>
+              </div>
               </div>
             </div>
           </motion.div>
