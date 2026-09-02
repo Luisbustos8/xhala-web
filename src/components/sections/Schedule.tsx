@@ -73,11 +73,11 @@ const Schedule = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-gray-200">
                   <span className="text-lg font-medium">Lunes a jueves</span>
-                  <span className="text-lg text-gray-600">10:00 – 13:00 y 17:00 – 20:00</span>
+                  <span className="text-lg text-gray-600">8:00 a 22:00</span>
                 </div>
                 <div className="flex justify-between items-center py-3">
                   <span className="text-lg font-medium">Viernes</span>
-                  <span className="text-lg text-gray-600">10:00 – 13:00</span>
+                  <span className="text-lg text-gray-600">8:00 – 13:00</span>
                 </div>
               </div>
             </motion.div>
